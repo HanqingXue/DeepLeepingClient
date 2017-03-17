@@ -81,35 +81,47 @@
       img:hover {
         border: solid 2px yellow;
       }
+
+      .page2 {
+        height: 600px;
+        border: solid 1px white;
+        margin-left: 30px;
+        margin-right:30px;
+        margin-top: 20px;
+      }
     </style>
     <script type="text/javascript" src="./js/jquery.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
+
+    <div class="row-fluid guide span12">
+      <div class="span8">
+        <div class="span4">
+          <a href="javascript:void(0)" class="normal"><img src="./icon/1.png" alt=""></a>
+          <a href="javascript:void(0)" class="normal"><img src="./icon/eye.png" alt=""></a>
+          <a href="javascript:void(0)" class="normal"><img src="./icon/template.png" alt=""></a>
+          <a href="javascript:void(0)" ><img src="./icon/analyse.png" alt=""></a>
+          <span class="operation">连接设备</span>
+          <span>图像分析</span>
+          <span>模板管理</span>
+          <span>系统设置</span>
+        </div>
+        <div class="span8">                
+        </div>
+      </div>
+      <div class="span4">
+        <marquee behavior="alternate" direction="left">
+          <div class="title-box"><h3 class="title">深度学习系统</h1></div>
+        </marquee>
+      </div>
+      <hr class="show">
+    </div>
+
+
+    <div class="container-fluid page">
+     <hr>
       <div class="row-fluid">
         <div class="span12">
-          <div class="row-fluid guide">
-            <div class="span8">
-              <div class="span4">
-                <a href="javascript:void(0)" class="normal"><img src="./icon/1.png" alt=""></a>
-                <a href="javascript:void(0)" class="normal"><img src="./icon/eye.png" alt=""></a>
-                <a href="javascript:void(0)" class="normal"><img src="./icon/template.png" alt=""></a>
-                <a href="javascript:void(0)" ><img src="./icon/analyse.png" alt=""></a>
-                <span class="operation">连接设备</span>
-                <span>图像分析</span>
-                <span>模板管理</span>
-                <span>系统设置</span>
-              </div>
-              <div class="span8">                
-              </div>
-            </div>
-            <div class="span4">
-              <marquee behavior="alternate" direction="left">
-                <div class="title-box"><h3 class="title">深度学习系统</h1></div>
-              </marquee>
-            </div>
-          </div>
-          <hr class="show">
           <div class="row-fluid ">
             <div class="span3 camera">
               <b>CH1</b>
@@ -161,6 +173,15 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid page2">
+       <h1 style="text-align: center;">Page2</h1>
+    </div>
+    <div class="container-fluid page2">
+       <h1 style="text-align: center;">Page3</h1>
+    </div>
+    <div class="container-fluid page2">
+       <h1 style="text-align: center;">Page4</h1>
+    </div>
   </body>
 
   <script>
@@ -169,21 +190,7 @@
   </script>
   <script>
     $("a").click(function () {
-        /*console.log($(this).attr('value'));
-        var imgPath = "\'img/"+ $(this).attr('value') + ".png\'";
-        var lineStyle  = $(this).attr('value');
-        var path = "/static/img/" + lineStyle + '.png'
-        console.log(path);
-        $('#imgLine').attr('src', path);
-        $('#imgLine').css('text-align', 'right');
-        $('#lineText').text(lineStyle);
-        cy.$('edge:selected').style('line-style', lineStyle);*/
-        console.log('hello');
-        const BrowserWindow = require('electron').remote.BrowserWindow
-        let win = new BrowserWindow({ frame: false,transparent: true })
-        win.on('close', function () { win = null })
-        win.loadURL('hello.html')
-        win.show()
+        $('.page1').hide();
       });
   </script>
 </html>
